@@ -1,29 +1,21 @@
 
-const EventEmitter = require('events');
-
+const EventEmitter = require('./events');
 
 // Diferencia de temperatura permitida entre la temperatura real y la ideal.
 const MARGEN_ERROR = 0.3;
 
-
 // Clase Termostato.
 // Mira la temperatura de una habitacion y avisa si hace demasiado calor o frio.
 // Tambien informa sobre la temperatura actual de la habitacion.
-// Metodos:
-//    indicarTemperaturaIdeal
-//    encender
-//    apagar
-// Eventos:
-//    tic
-//    muchocalor
-//    muchofrio
+// Metodos: indicarTemperaturaIdeal, encender, apagar
+// Eventos: tic, muchocalor, muchofrio
 class Termostato  extends EventEmitter {
 
 	constructor(habitacion) {
 		super();
 
 		this.habitacion = habitacion;
-	
+
 		// Temperatura ideal programada:
 		this.temperaturaIdeal = 16;
 
@@ -56,4 +48,3 @@ class Termostato  extends EventEmitter {
 }
 
 exports = module.exports = Termostato;
-

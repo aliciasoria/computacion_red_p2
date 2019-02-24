@@ -1,4 +1,4 @@
-
+﻿
 // Clase habitacion.
 // Su temperatura cambia aleatoriamente. (Simula el invierno o el verano)
 class Habitacion {
